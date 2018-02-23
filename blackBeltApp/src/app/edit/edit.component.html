@@ -1,0 +1,25 @@
+<div style="text-align:center">
+
+<form (submit)="updatePet(pet._id)">
+  <p>
+    Name: <input type="text" name="pet.name" value="{{pet.name}}" [(ngModel)]="pet.name">
+  </p>
+  <p>
+    Type: <input type="text" name="pet.type" value="{{pet.type}}" [(ngModel)]="pet.type">
+  </p>
+  <p>
+    Desc: <input type="text" name="pet.desc" value="{{pet.desc}}" [(ngModel)]="pet.desc">
+  </p>
+  Skills:
+  <p>
+    Skill 1: <input type="text" name="pet.skill1" value="{{pet.skill1}}" [(ngModel)]="pet.skill1">
+  </p>
+  <p>
+    Skill 2: <input type="text" name="pet.skill2" value="{{pet.skill2}}" [(ngModel)]="pet.skill2">
+  </p>
+  <p>
+    Skill 3: <input type="text" name="pet.skill3" value="{{pet.skill3}}" [(ngModel)]="pet.skill3">
+  </p>
+  <input type="submit" value="Update"> <button [routerLink]='["/home"]'>Cancel</button>
+</form>
+</div>

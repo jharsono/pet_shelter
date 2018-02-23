@@ -1,0 +1,31 @@
+<div style="text-align:center">
+<h2>{{pet.name}}</h2>
+
+<p>Pet Type:
+  {{pet.type}}
+</p>
+<p>Pet Description:
+  {{pet.desc}}
+</p>
+
+<p>Pet Skills
+<ul>
+  <li>{{pet.skill1}}</li>
+  <li>{{pet.skill2}}</li>
+  <li>{{pet.skill3}}</li>
+</ul>
+
+<p>Likes:
+  {{pet.likes}}
+</p>
+<p>
+  Waiting for you to adopt since: {{ pet.createdAt | date:format:'yyyy-MM-dd' }}
+</p>
+
+  <button *ngIf="liked;else disabled" (click)="likePet(pet)">Like</button>
+<ng-template #disabled><button type="button" disabled>Liked</button></ng-template>
+
+
+  <button (click)="delete(pet._id)">Adopt</button>
+
+</div>

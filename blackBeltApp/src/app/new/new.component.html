@@ -1,0 +1,25 @@
+<form (submit) = "addPet()">
+  <p>
+    Pet Name:<input type="text" name="petName" [(ngModel)] = "newPet.name">
+  </p>
+  <p>
+    Type:<input type="text" name="petType" [(ngModel)] = "newPet.type">
+  </p>
+  <p>
+    Desc:<input type="text" name="petDesc" [(ngModel)] = "newPet.desc">
+  </p>
+  Skills:
+  <p>
+    Skill 1:<input type="text" name="petSkill1" [(ngModel)] = "newPet.skill1">
+  </p>
+  <p>
+    Skill 2:<input type="text" name="petSkill2" [(ngModel)] = "newPet.skill2">
+  </p>
+  <p>
+    Skill 3:<input type="text" name="petSkill3" [(ngModel)] = "newPet.skill3">
+  </p>
+  <input type="submit" value="Add">
+</form>
+ <button [routerLink] = '["/home"]' >Cancel</button>
+
+ <div *ngIf="validationError"> {{validationError | json}}</div>
